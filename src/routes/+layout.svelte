@@ -1,40 +1,38 @@
 <script>
 	import favicon from '$lib/assets/favicon.svg';
 	import "../app.css";
-	import { Button } from "$lib/components/ui/button.svelte";
+	import { Button } from "$lib/components/ui/button";
 
 	let { children } = $props();
 </script>
+<div id="page">
 
-<!-- <svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head> -->
+	<div class="bg-blue-400 h-25">
+		<div class="flex justify-between items-center h-full px-4">
 
-<div id="navigation">
-	<nav>
-	  <p>hello</p>
+			<h1 class="text-black text-3xl">
+			Expense Tracker App
+			</h1>
 
-	</nav>
+			<Button class="bg-blue-700 text-white">
+			   dark mode
+			</Button>
+
+		</div>
+
+
+	</div>
+
+	<main class="p-6 bg-blue-200 min-h-screen">
+      {@render children()}
+    </main>
+
 </div>
-<!-- 
-<Button variant="outline">
-  Click me
-</Button> -->
-<button>
-	 hel
-</button>
-
-<div>
-	dfdfs
-</div>
-
 
 <style>
+/* @media(max-width:405px){
 
-    div{
-	background-color:blue;
-	}
+} */
 
 </style>
 
-{@render children()}
